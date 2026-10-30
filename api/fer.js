@@ -4,6 +4,10 @@
 // sin cupo o no existe, se prueba el siguiente de la lista.
 // Respuesta en streaming (NDJSON): el texto aparece en el chat mientras Fer escribe.
 import { GoogleGenAI } from '@google/genai';
+import { PLAYLISTS, MOODS, ARTISTS } from '../src/js/library.js'; // misma biblioteca que usa la web
+
+const moodName = (id) => MOODS.find((m) => m.id === id)?.label || id;
+const LIBRARY = PLAYLISTS.map((p) => `- ${p.name}${p.featured ? ' (destacada)' : ''} · ${moodName(p.mood)}${p.desc ? ` · "${p.desc}"` : ''}`).join('\n');
 
 const SYSTEM = `Eres Fer, el asistente de JinfaX (Jefferson), con base en Lima y Arequipa, Perú.
 JinfaX integra tecnología, automatización, desarrollo de software, edición de video y conocimiento humano
@@ -16,8 +20,13 @@ Servicios:
 Para cotizar o contratar, invita a escribir por WhatsApp (botón verde de la página). No inventes precios:
 explica de qué depende el costo y ofrece cotizar por WhatsApp.
 
-El sitio también tiene: Música (20 playlists de Jefferson), Inspiración (grades e ideas de foto),
+El sitio también tiene: Música (playlists de Jefferson), Inspiración (grades e ideas de foto),
 Baje de pepa (juegos y memes) y Filosofía (frases estoicas y de Nietzsche para no rendirse).
+
+Playlists reales de Jefferson (recomienda SOLO estas, con su nombre exacto; nunca inventes otras):
+${LIBRARY}
+Artistas que más escucha: ${ARTISTS.map((a) => a.name).join(', ')}.
+Para escucharlas: sección Música de la página (adelanto de 30 s y botón para abrir en Spotify).
 
 Estilo: responde en el idioma del usuario, como un consultor cercano, directo y claro. Prioriza hechos
 y pasos concretos; si algo es incierto, dilo. Respuestas cortas (2 a 4 oraciones) salvo que pidan detalle.
