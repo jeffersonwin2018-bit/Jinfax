@@ -1,0 +1,44 @@
+<header class="pl-hero" id="inspHero" style="--h-tint: 120, 74, 48">
+  <div class="pl-hero__bg" aria-hidden="true"></div>
+  <div class="pl-hero__in">
+    <div class="pl-hero__cover"><img src="/assets/inspiracion/grades/cobre.webp" alt="" width="900" height="900"></div>
+    <div class="pl-hero__meta">
+      <span class="eyebrow">// 02 — antes de disparar</span>
+      <h1 class="pl-hero__title">Inspi<em>ración.</em></h1>
+      <p class="pl-hero__lead">Grades, ideas y referencias para la próxima foto. La misma imagen puede contar historias distintas: arrastra y compara.</p>
+      <p class="pl-hero__stats" id="inspStats"><span class="by"><img src="/assets/img/logo.webp" alt="" width="20" height="26"><b>JinfaX</b></span></p>
+    </div>
+  </div>
+  <div class="pl-actions">
+    <button class="play-big play-big--lg" id="inspPlay" type="button" aria-label="Ver la galería a pantalla completa"><svg><use href="#i-play"/></svg></button>
+    <button class="icon-btn icon-btn--ghost" id="inspShuffle" type="button" aria-label="Una idea al azar"><svg><use href="#i-shuffle"/></svg></button>
+    <span class="pl-actions__hint">Play: galería a pantalla completa</span>
+  </div>
+</header>
+
+<section class="section music" aria-labelledby="grade-title">
+  <div class="compare-wrap">
+    <div class="compare" id="compare" style="--pos:50%">
+      <img src="/assets/inspiracion/grades/original.webp" alt="Foto original sin edición" width="900" height="900">
+      <img class="compare__after" id="compareAfter" src="/assets/inspiracion/grades/cobre.webp" alt="La misma foto con el grade seleccionado" width="900" height="900">
+      <span class="compare__tag compare__tag--a">Original</span>
+      <span class="compare__tag compare__tag--b" id="compareTag">Cobre noir</span>
+      <div class="compare__handle" id="compareHandle" role="slider" tabindex="0" aria-label="Comparar original y grade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span><svg><use href="#i-swap"/></svg></span></div>
+    </div>
+    <div class="grade-panel">
+      <div class="shelf__head"><div><h3 id="grade-title">Una foto, varias vibras</h3><p>Elige un grade y arrastra la línea</p></div></div>
+      <ul class="grade-tiles" id="grades" role="group" aria-label="Elegir grade"></ul>
+      <div class="grade-note"><span class="grade-note__k">Cómo se logra</span><p id="gradeNote"></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="ideas-title">
+  <div class="shelf__head"><div><h3 id="ideas-title">Tomas que quiero hacer</h3><p id="ideasMeta">Ideas con ajustes y paleta</p></div></div>
+  <ul class="rail rail--ideas" id="ideas"></ul>
+</section>
+
+<section class="section section--tight" aria-labelledby="gal-title">
+  <div class="shelf__head"><div><h3 id="gal-title">Referencias</h3><p>Toca una para verla en grande</p></div></div>
+  <div class="masonry" id="gallery"></div>
+</section>

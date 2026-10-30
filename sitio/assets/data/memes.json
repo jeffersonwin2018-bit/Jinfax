@@ -1,0 +1,4 @@
+{
+  "_LEEME": "Agrega memes con: python tools/agregar_fotos.py memes <carpeta-con-imagenes>. Mientras esta lista esté vacía, la sección de memes no se muestra.",
+  "memes": []
+}

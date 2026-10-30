@@ -1,0 +1,38 @@
+<header class="pl-hero" id="libHero">
+  <div class="pl-hero__bg" aria-hidden="true"></div>
+  <div class="pl-hero__in">
+    <div class="pl-hero__cover" id="libCover"></div>
+    <div class="pl-hero__meta">
+      <span class="eyebrow eyebrow--signal">// 01 — el sonido de jinfax</span>
+      <h1 class="pl-hero__title">La <em>biblioteca.</em></h1>
+      <p class="pl-hero__lead">Cada playlist es un estado de ánimo. Toca una portada: suena un adelanto y la pantalla se tiñe con su color.</p>
+      <p class="pl-hero__stats" id="libStats"></p>
+    </div>
+  </div>
+  <div class="pl-actions">
+    <button class="play-big play-big--lg" id="libPlay" type="button" aria-label="Reproducir una playlist al azar"><svg><use href="#i-play"/></svg></button>
+    <button class="icon-btn icon-btn--ghost" id="libShuffle" type="button" aria-label="Abrir una playlist al azar"><svg><use href="#i-shuffle"/></svg></button>
+    <a class="icon-btn icon-btn--ghost" id="profileLink" target="_blank" rel="noopener" aria-label="Seguirme en Spotify"><svg><use href="#i-spotify"/></svg></a>
+    <div class="view-toggle" id="viewToggle" role="group" aria-label="Vista" hidden>
+      <button type="button" data-view="list" aria-label="Ver como lista" aria-pressed="true"><svg><use href="#i-list"/></svg></button>
+      <button type="button" data-view="grid" aria-label="Ver como cuadrícula" aria-pressed="false"><svg><use href="#i-grid"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="section music" aria-label="Playlists">
+  <div class="lib-bar"><div class="chips" role="tablist" aria-label="Filtrar por vibra" id="chips"></div></div>
+  <div id="libHome">
+    <ul class="quick" id="quick" aria-label="Accesos rápidos"></ul>
+    <div id="shelves"></div>
+  </div>
+  <div id="libMood" hidden>
+    <div class="shelf__head"><div><h3 id="moodTitle"></h3><p id="moodMeta"></p></div><button class="shelf__more" type="button" data-mood-reset>Ver todo</button></div>
+    <ul class="tracklist" id="collection" aria-live="polite"></ul>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="art-title">
+  <div class="shelf__head"><div><h3 id="art-title">Los que suenan en loop</h3><p>Artistas que no salen de mis playlists</p></div><a class="shelf__more" id="profileLink2" target="_blank" rel="noopener">Mi perfil</a></div>
+  <ul class="artists" id="artists"></ul>
+</section>

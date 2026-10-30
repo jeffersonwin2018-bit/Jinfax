@@ -1,0 +1,19 @@
+{
+  "_LEEME": "Frases de la página Filosofía. Puedes agregar las tuyas con autor \"JinfaX\". Traducciones propias de obras de dominio público.",
+  "frases": [
+    { "texto": "Lo que no me mata me hace más fuerte.", "autor": "Friedrich Nietzsche", "obra": "Crepúsculo de los ídolos, 1888" },
+    { "texto": "Lo que impide la acción hace avanzar la acción. Lo que se interpone en el camino se convierte en el camino.", "autor": "Marco Aurelio", "obra": "Meditaciones, V.20" },
+    { "texto": "No son las cosas las que nos perturban, sino lo que pensamos de ellas.", "autor": "Epicteto", "obra": "Enquiridión, 5" },
+    { "texto": "No es que tengamos poco tiempo, sino que perdemos mucho.", "autor": "Séneca", "obra": "Sobre la brevedad de la vida" },
+    { "texto": "Quien tiene un porqué para vivir soporta casi cualquier cómo.", "autor": "Friedrich Nietzsche", "obra": "Crepúsculo de los ídolos, 1888" },
+    { "texto": "Nadie se baña dos veces en el mismo río.", "autor": "Heráclito", "obra": "Fragmentos" },
+    { "texto": "Sufrimos más en la imaginación que en la realidad.", "autor": "Séneca", "obra": "Cartas a Lucilio, 13" },
+    { "texto": "Primero di quién quieres ser. Después haz lo que tengas que hacer.", "autor": "Epicteto", "obra": "Discursos, III.23" },
+    { "texto": "La mejor venganza es no parecerte a quien te hizo daño.", "autor": "Marco Aurelio", "obra": "Meditaciones, VI.6" },
+    { "texto": "Un viaje de mil li empieza bajo tus pies.", "autor": "Lao Tse", "obra": "Tao Te Ching, 64" },
+    { "texto": "Conoce al otro y conócete a ti mismo: en cien batallas no correrás peligro.", "autor": "Sun Tzu", "obra": "El arte de la guerra, III" },
+    { "texto": "Llega a ser el que eres.", "autor": "Friedrich Nietzsche", "obra": "La gaya ciencia, 270" },
+    { "texto": "Mientras esperamos vivir, la vida se nos pasa.", "autor": "Séneca", "obra": "Cartas a Lucilio, 1" },
+    { "texto": "El alma se tiñe del color de sus pensamientos.", "autor": "Marco Aurelio", "obra": "Meditaciones, V.16" }
+  ]
+}

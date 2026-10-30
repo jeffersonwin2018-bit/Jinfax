@@ -1,0 +1,156 @@
+<section class="hero" id="inicio">
+  <div class="hero__media" id="heroMedia">
+    <div class="hero__move">
+      <div class="hero__beams" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img class="hero__photo" src="/assets/img/hero-dark-720.webp"
+           srcset="/assets/img/hero-dark-480.webp 480w, /assets/img/hero-dark-720.webp 720w, /assets/img/hero-dark-1080.webp 1080w"
+           sizes="(min-width: 900px) 64vw, 100vw" width="1080" height="1080" fetchpriority="high"
+           alt="JinfaX de espaldas frente al escenario de un festival, con tatuajes en la espalda">
+      <img class="hero__ink" id="heroInk" src="/assets/img/ink-dark-720.webp"
+           srcset="/assets/img/ink-dark-720.webp 720w, /assets/img/ink-dark-1080.webp 1080w"
+           sizes="(min-width: 900px) 64vw, 100vw" width="1080" height="1080" alt="" aria-hidden="true" decoding="async">
+      <span class="hero__lens" id="heroLens" aria-hidden="true"><b>INK</b></span>
+    </div>
+    <canvas class="hero__fx" id="heroFx" aria-hidden="true"></canvas>
+  </div>
+  <div class="hero__caption">
+    <span class="eyebrow">// backstage, no en el escritorio</span>
+    <h1 data-typing-text="«Lo que no me mata|me hace más fuerte.»">«Lo que no me mata<br>me hace más fuerte.»</h1>
+    <div class="hero__cta">
+      <a class="btn btn--solid" href="/musica/" data-magnetic><svg><use href="#i-wave"/></svg>Entrar en la frecuencia</a>
+      <button class="btn btn--ghost btn--ink" id="inkToggle" type="button" aria-pressed="false" data-magnetic><span class="btn__dot"></span>Revelar tinta</button>
+    </div>
+  </div>
+  <p class="hero__hint" id="heroHint" aria-hidden="true"></p>
+  <div class="hero__meta" aria-hidden="true"><span><i></i>Scroll</span><span>Lima — Arequipa · PE</span></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>automatización</span><i>✦</i><span>edición</span><i>✦</i><span>código</span><i>✦</i><span>música</span><i>✦</i><span>filosofía</span><i>✦</i><span>libertad</span><i>✦</i>
+    <span>automatización</span><i>✦</i><span>edición</span><i>✦</i><span>código</span><i>✦</i><span>música</span><i>✦</i><span>filosofía</span><i>✦</i><span>libertad</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ÍNDICE -->
+<section class="section" aria-labelledby="idx-title">
+  <div class="section__head">
+    <span class="eyebrow reveal">// índice</span>
+    <h2 id="idx-title">Cuatro mundos.<br><em>Elige uno.</em></h2>
+  </div>
+  <nav class="index" id="index" aria-label="Secciones del sitio">
+    <a class="index__row" href="/musica/" data-img="music" data-cursor="ENTRAR">
+      <span class="index__num">01</span>
+      <span><span class="index__title">Música</span><span class="index__desc">20 playlists · adelantos de 30 s</span></span>
+      <span class="index__thumb"><img src="https://mosaic.scdn.co/300/ab67616d00001e021f400a1f4d821b00824cf58fab67616d00001e02c451ed28353639e79b4d97d9ab67616d00001e02df54506fd365623237335f21ab67616d00001e02e28947f6ad2f100af9c1965a" alt="" loading="lazy"></span>
+      <span class="index__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+    </a>
+    <a class="index__row" href="/inspiracion/" data-img="insp" data-cursor="ENTRAR">
+      <span class="index__num">02</span>
+      <span><span class="index__title">Inspiración</span><span class="index__desc">Grades e ideas para fotos</span></span>
+      <span class="index__thumb"><img src="/assets/inspiracion/noir.webp" alt="" loading="lazy"></span>
+      <span class="index__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+    </a>
+    <a class="index__row" href="/baje-de-pepa/" data-img="baje" data-cursor="ENTRAR">
+      <span class="index__num">03</span>
+      <span><span class="index__title">Baje de pepa</span><span class="index__desc">Juegos, memes y ruleta</span></span>
+      <span class="index__thumb"><img src="/assets/inspiracion/neon.webp" alt="" loading="lazy"></span>
+      <span class="index__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+    </a>
+    <a class="index__row" href="/filosofia/" data-img="philo" data-cursor="ENTRAR">
+      <span class="index__num">04</span>
+      <span><span class="index__title">Filosofía</span><span class="index__desc">Frases para no rendirse</span></span>
+      <span class="index__thumb"><img src="/assets/inspiracion/cobre-detalle.webp" alt="" loading="lazy"></span>
+      <span class="index__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+    </a>
+  </nav>
+  <div class="index__float" id="indexFloat" aria-hidden="true">
+    <img data-k="music" src="https://mosaic.scdn.co/640/ab67616d0000b2731f400a1f4d821b00824cf58fab67616d0000b273c451ed28353639e79b4d97d9ab67616d0000b273df54506fd365623237335f21ab67616d0000b273e28947f6ad2f100af9c1965a" alt="" loading="lazy">
+    <img data-k="insp" src="/assets/inspiracion/noir.webp" alt="" loading="lazy">
+    <img data-k="baje" src="/assets/inspiracion/neon.webp" alt="" loading="lazy">
+    <img data-k="philo" src="/assets/inspiracion/cobre-detalle.webp" alt="" loading="lazy">
+  </div>
+</section>
+
+<!-- TEASER MÚSICA -->
+<section class="section" aria-labelledby="mus-title">
+  <div class="section__head">
+    <span class="eyebrow eyebrow--signal reveal">// el sonido de jinfax</span>
+    <h2 id="mus-title">Lo que suena<br><em>cuando creo.</em></h2>
+  </div>
+  <div class="featured reveal" id="featured"></div>
+  <div class="shelf">
+    <div class="shelf__head"><div><h3>Para escuchar ahora</h3><p>Toca el botón verde para un adelanto</p></div><a class="shelf__more" href="/musica/">Mostrar todo</a></div>
+    <ul class="rail" id="teaserRail"></ul>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios" aria-labelledby="srv-title">
+  <div class="section__head">
+    <span class="eyebrow reveal">// lo que hacemos</span>
+    <h2 id="srv-title">Servicios que convierten ideas en movimiento.</h2>
+  </div>
+  <div class="services__list">
+    <article class="service reveal-card"><span class="service__num">01</span><div><h3>Automatización</h3><p>Bots, inteligencia artificial, procesos y ventas que trabajan por ti.</p></div></article>
+    <article class="service reveal-card" style="--d:1"><span class="service__num">02</span><div><h3>Exposición digital</h3><p>Páginas web, contenido, Maps, SEO y redes sociales para hacer visible tu proyecto.</p></div></article>
+    <article class="service reveal-card" style="--d:2"><span class="service__num">03</span><div><h3>Soporte técnico</h3><p>Mantenimiento de servidores, equipos y redes informáticas.</p></div></article>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="section map" id="ubicacion" aria-labelledby="map-title">
+  <div class="section__head">
+    <span class="eyebrow reveal">// coordenadas</span>
+    <h2 id="map-title">Desde Lima<br><em>hasta Arequipa.</em></h2>
+  </div>
+  <div class="map__wrap">
+    <div class="map__stage reveal"><!--MAP--></div>
+    <div class="map__info">
+      <a class="place reveal-card is-active" data-city="lima" href="https://www.google.com/maps/search/?api=1&query=Lima%2C%20Per%C3%BA" target="_blank" rel="noopener">
+        <span class="place__tag">Base principal</span><strong>Lima</strong>
+        <span class="place__coords">12.0464° S · 77.0428° O</span>
+        <span class="place__go">Ver en Maps <svg><use href="#i-external"/></svg></span>
+      </a>
+      <a class="place reveal-card" style="--d:1" data-city="arequipa" href="https://www.google.com/maps/search/?api=1&query=Arequipa%2C%20Per%C3%BA" target="_blank" rel="noopener">
+        <span class="place__tag">También en</span><strong>Arequipa</strong>
+        <span class="place__coords">16.4090° S · 71.5375° O</span>
+        <span class="place__go">Ver en Maps <svg><use href="#i-external"/></svg></span>
+      </a>
+      <div class="clock reveal-card" style="--d:2">
+        <span class="clock__label">Hora en Perú</span>
+        <span class="clock__time" id="clockTime">--:--:--</span>
+        <span class="clock__status" id="clockStatus"></span>
+        <span class="clock__km"><b>766 km</b> entre ambas bases</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓDIGO -->
+<section class="section" aria-labelledby="code-title">
+  <div class="section__head">
+    <span class="eyebrow reveal">// lo que pasa detrás</span>
+    <h2 id="code-title">Esto es lo que suena cuando no hay música.</h2>
+  </div>
+  <div class="code__grid">
+    <div class="code-card reveal-card">
+      <div class="code-card__bar"><span class="dots"><i></i><i></i><i></i></span><span>automation.py</span></div>
+      <pre class="code-card__body"><code><span class="cm">### corre cada mañana a las 7am</span>
+<span class="kw">def</span> <span class="fn">sync_inventario</span>(tienda):
+  datos = api.get(<span class="str">"/stock"</span>)
+  sheet.actualizar(datos)
+  <span class="kw">if</span> datos.bajo_stock:
+    bot.notificar(<span class="str">"reponer ⚠️"</span>)
+  <span class="kw">return</span> <span class="pn">True</span></code></pre>
+    </div>
+    <div class="code-card reveal-card" style="--d:1">
+      <div class="code-card__bar"><span class="dots"><i></i><i></i><i></i></span><span>flow.js</span></div>
+      <pre class="code-card__body"><code><span class="kw">const</span> <span class="pn">flujo</span> = <span class="kw">async</span> () =&gt; {
+  <span class="kw">const</span> data = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">webhook</span>);
+  <span class="fn">enviarA</span>(<span class="str">"crm"</span>, data);
+  <span class="cm">// cero clics, cero copy-paste</span>
+};</code></pre>
+    </div>
+  </div>
+</section>

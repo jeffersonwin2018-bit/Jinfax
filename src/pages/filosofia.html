@@ -1,0 +1,56 @@
+<div class="philo" id="philo">
+  <div class="philo__bg" id="philoBg" aria-hidden="true"></div>
+  <header class="pl-hero pl-hero--philo" id="philoHero">
+    <div class="pl-hero__bg" aria-hidden="true"></div>
+    <div class="pl-hero__in">
+      <div class="pl-hero__cover philo-cover" aria-hidden="true">
+        <svg class="philo-cover__q"><use href="#i-quote"/></svg>
+        <span class="philo-cover__t">Filo<em>sofía</em></span>
+        <span class="philo-cover__s">JinfaX · para no rendirse</span>
+      </div>
+      <div class="pl-hero__meta">
+        <span class="eyebrow">// 04 — pensar para resistir</span>
+        <h1 class="pl-hero__title">Filo<em>sofía.</em></h1>
+        <p class="pl-hero__lead">Frases que sostienen. Toca una para leerla a pantalla completa y compártela en tu estado si te pega.</p>
+        <p class="pl-hero__stats" id="philoStats"></p>
+      </div>
+    </div>
+    <div class="pl-actions">
+      <button class="play-big play-big--lg" id="philoRead" type="button" aria-label="Empezar a leer"><svg><use href="#i-play"/></svg></button>
+      <button class="icon-btn icon-btn--ghost" id="oracle" type="button" aria-label="Oráculo: una frase al azar"><svg><use href="#i-shuffle"/></svg></button>
+      <span class="pl-actions__hint">Oráculo: deja que el azar elija</span>
+    </div>
+  </header>
+
+  <section class="section music" aria-label="Frases">
+    <div class="lib-bar"><div class="chips" role="tablist" aria-label="Filtrar por autor" id="authorChips"></div></div>
+    <div class="qhead" aria-hidden="true"><span>#</span><span>Frase</span><span>Obra</span><span></span></div>
+    <ol class="qlist" id="quotes"></ol>
+  </section>
+
+  <section class="section section--tight" aria-labelledby="voices-title">
+    <div class="shelf__head"><div><h3 id="voices-title">Las voces</h3><p>Toca un autor para ver solo sus frases</p></div></div>
+    <ul class="artists" id="authors"></ul>
+  </section>
+
+  <div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Lector de frases" hidden>
+    <div class="reader__bg" aria-hidden="true"></div>
+    <div class="reader__top">
+      <button class="icon-btn" type="button" data-r="close" aria-label="Cerrar"><svg><use href="#i-down"/></svg></button>
+      <span class="reader__count" id="readerCount"></span>
+      <button class="icon-btn" type="button" data-r="copy" aria-label="Copiar frase"><svg><use href="#i-copy"/></svg></button>
+    </div>
+    <div class="reader__stage" id="readerStage">
+      <span class="reader__tag" id="readerTag"></span>
+      <blockquote class="reader__q" id="readerQ"></blockquote>
+      <cite class="reader__cite" id="readerCite"></cite>
+    </div>
+    <div class="reader__bar"><i id="readerBar"></i></div>
+    <div class="reader__ctrl">
+      <button class="icon-btn" type="button" data-r="prev" aria-label="Frase anterior"><svg><use href="#i-prev"/></svg></button>
+      <button class="play-big play-big--lg reader__share" type="button" data-r="share" aria-label="Compartir en mi estado"><svg><use href="#i-share"/></svg></button>
+      <button class="icon-btn" type="button" data-r="next" aria-label="Frase siguiente"><svg><use href="#i-next"/></svg></button>
+    </div>
+    <p class="reader__hint">Desliza ← → para cambiar · ↓ para cerrar</p>
+  </div>
+</div>

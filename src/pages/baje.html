@@ -1,0 +1,71 @@
+<header class="pl-hero" id="bajeHero" style="--h-tint: 40, 70, 120">
+  <div class="pl-hero__bg" aria-hidden="true"></div>
+  <div class="pl-hero__in">
+    <div class="pl-hero__cover"><img src="/assets/inspiracion/neon.webp" alt="" width="900" height="900"></div>
+    <div class="pl-hero__meta">
+      <span class="eyebrow">// 03 — modo relajo</span>
+      <h1 class="pl-hero__title">Baje de <em>pepa.</em></h1>
+      <p class="pl-hero__lead">Juegos rápidos, memes y una ruleta para cuando no sabes qué hacer. Cero estrés, puro relajo.</p>
+      <p class="pl-hero__stats"><span class="by"><img src="/assets/img/logo.webp" alt="" width="20" height="26"><b>JinfaX</b></span><span>3 juegos · 1 ruleta · récords guardados en tu celular</span></p>
+    </div>
+  </div>
+  <div class="pl-actions">
+    <button class="play-big play-big--lg" id="bajePlay" type="button" aria-label="Jugar algo al azar"><svg><use href="#i-play"/></svg></button>
+    <span class="pl-actions__hint">Play: la suerte elige el juego</span>
+  </div>
+</header>
+
+<section class="section music" aria-label="Juegos">
+  <div class="lib-bar"><div class="chips" role="tablist" aria-label="Elegir juego" id="gameTabs">
+    <button class="chip" role="tab" type="button" data-tab="reflex" aria-selected="true">Reflejos</button>
+    <button class="chip" role="tab" type="button" data-tab="memory" aria-selected="false">Memoria</button>
+    <button class="chip" role="tab" type="button" data-tab="wheel" aria-selected="false">¿Qué hago hoy?</button>
+    <button class="chip" role="tab" type="button" data-tab="memes" aria-selected="false" id="memesTab" hidden>Memes</button>
+  </div></div>
+
+  <div class="arcade">
+    <div class="arcade__stage">
+      <article class="game" data-panel="reflex" role="tabpanel" aria-label="Reflejos">
+        <div class="game__head"><div><h3>Reflejos</h3><p>5 rondas · toca cuando se ponga cobre</p></div><span class="game__pill" id="reflexBest">Récord: —</span></div>
+        <div class="game__body">
+          <div class="reflex" id="reflex" role="button" tabindex="0" aria-live="polite">
+            <div><strong>Toca para empezar</strong><small>Cuando se ponga cobre, toca lo más rápido que puedas.</small></div>
+          </div>
+          <div class="game__stats"><span>Ronda <b id="reflexRound">0</b>/5</span><span>Promedio <b id="reflexAvg">—</b></span></div>
+          <button class="btn btn--ghost btn--sm" id="reflexShare" type="button" style="margin-top:12px" hidden><svg><use href="#i-share"/></svg>Retar a alguien</button>
+        </div>
+      </article>
+
+      <article class="game" data-panel="memory" role="tabpanel" aria-label="Memoria" hidden>
+        <div class="game__head"><div><h3>Memoria</h3><p>Encuentra las 6 parejas de portadas</p></div><span class="game__pill" id="memStats">0 movimientos</span></div>
+        <div class="game__body">
+          <div class="memory" id="memory"></div>
+          <button class="btn btn--ghost btn--sm" id="memReset" type="button" style="margin-top:14px"><svg><use href="#i-refresh"/></svg>Barajar</button>
+        </div>
+      </article>
+
+      <article class="game" data-panel="wheel" role="tabpanel" aria-label="Ruleta" hidden>
+        <div class="game__head"><div><h3>¿Qué hago hoy?</h3><p>La ruleta decide por ti</p></div></div>
+        <div class="game__body">
+          <div class="wheel-wrap"><canvas class="wheel" id="wheel" width="640" height="640" role="img" aria-label="Ruleta de actividades"></canvas></div>
+          <div class="wheel-out" id="wheelOut" aria-live="polite"></div>
+          <button class="btn btn--solid btn--block" id="wheelSpin" type="button" style="margin-top:8px"><svg><use href="#i-shuffle"/></svg>Girar</button>
+        </div>
+      </article>
+
+      <div class="game game--memes" data-panel="memes" role="tabpanel" aria-label="Memes" hidden>
+        <div class="game__head"><div><h3>Memes de la casa</h3><p>Toca uno para verlo en grande</p></div></div>
+        <div class="game__body"><div class="masonry" id="memes"></div></div>
+      </div>
+    </div>
+
+    <aside class="arcade__side" aria-label="Tus récords">
+      <div class="shelf__head"><div><h3>Tus récords</h3><p>Se guardan en este dispositivo</p></div></div>
+      <ul class="records">
+        <li><span class="records__ic"><svg><use href="#i-wave"/></svg></span><span>Reflejos<small>Mejor promedio</small></span><b id="recReflex">—</b></li>
+        <li><span class="records__ic"><svg><use href="#i-grid"/></svg></span><span>Memoria<small>Menos movimientos</small></span><b id="recMemory">—</b></li>
+        <li><span class="records__ic"><svg><use href="#i-shuffle"/></svg></span><span>Ruleta<small>Último resultado</small></span><b id="recWheel">—</b></li>
+      </ul>
+    </aside>
+  </div>
+</section>

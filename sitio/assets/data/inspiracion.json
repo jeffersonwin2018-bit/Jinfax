@@ -1,0 +1,26 @@
+{
+  "_LEEME": "Edita este archivo para cambiar la galería y las ideas. Para agregar fotos usa tools/agregar_fotos.py (las optimiza y las añade aquí solo).",
+  "grades": [
+    { "id": "cobre", "nombre": "Cobre noir", "nota": "Exposición baja, cielo hundido y una luz cálida solo sobre la espalda. Negros profundos, piel con micro-contraste para que la tinta mande." },
+    { "id": "noir", "nombre": "Noir", "nota": "Blanco y negro duro con viñeta. Sin color, la composición y los tatuajes hacen todo el trabajo." },
+    { "id": "cine", "nombre": "Cine 35mm", "nota": "Negros lavados, sombras azul petróleo, altas luces naranja y grano de película. Nostalgia de festival." },
+    { "id": "neon", "nombre": "Neón", "nota": "Sombras magenta y luces amarillo ácido. Para portadas, flyers o miniaturas que tienen que gritar." }
+  ],
+  "ideas": [
+    { "titulo": "Contraluz de escenario", "texto": "De espaldas al público, con las pantallas del escenario como única luz. Expón para las luces y deja que el cuerpo sea silueta.", "specs": ["Noche", "f/1.8", "1/250", "ISO 1600"], "paleta": ["#0B0C0F", "#3A1E14", "#C97A45", "#F2B66D"] },
+    { "titulo": "Espalda y tinta", "texto": "Plano medio de la espalda con luz lateral dura. La luz rasante marca la piel y hace que los tatuajes salten.", "specs": ["Luz lateral", "50mm", "f/4", "Fondo negro"], "paleta": ["#07080A", "#2B2420", "#B9A48E", "#EDEAE3"] },
+    { "titulo": "Sillar de Arequipa", "texto": "Muros blancos de sillar al mediodía: sombras duras, contraste brutal. Ropa negra para que destaque.", "specs": ["Mediodía", "Sombra dura", "28mm", "f/8"], "paleta": ["#F4F1EA", "#D9D2C3", "#7E776B", "#141414"] },
+    { "titulo": "Lima de noche, neón", "texto": "Calle mojada en Barranco o el Centro con letreros de neón. Busca reflejos en charcos o vidrios.", "specs": ["Hora azul", "35mm", "f/1.4", "Reflejos"], "paleta": ["#06121F", "#1C3F5E", "#E2367A", "#F5D547"] },
+    { "titulo": "Flash directo", "texto": "Flash de frente en plena noche, estilo paparazzi. Piel brillante, fondo oscuro, actitud de portada.", "specs": ["Flash", "1/60", "f/5.6", "Sin difusor"], "paleta": ["#000000", "#2A2A2A", "#E8E3D9", "#FF3B30"] },
+    { "titulo": "Humo y haces", "texto": "Máquina de humo o polvo contra una luz fuerte detrás. Los haces de luz se vuelven sólidos.", "specs": ["Contraluz", "Humo", "85mm", "f/2"], "paleta": ["#0B0C0F", "#34404D", "#9FB4C7", "#FFFFFF"] },
+    { "titulo": "Obturación lenta", "texto": "Tú quieto, el mundo moviéndose: gente, autos o luces convertidos en estelas. Apoya la cámara.", "specs": ["Trípode", "1/4 s", "f/11", "ISO 100"], "paleta": ["#0A0A12", "#2B1D4A", "#C97A45", "#EDEAE3"] },
+    { "titulo": "Grano y desenfoque", "texto": "Retrato con algo desenfocado en primer plano (una reja, una planta, un vidrio). Agrega grano en edición.", "specs": ["Primer plano", "85mm", "f/1.8", "Grano"], "paleta": ["#151515", "#4A3B2F", "#A38B6D", "#E9DFCF"] }
+  ],
+  "galeria": [
+    { "src": "/assets/inspiracion/cobre-detalle.webp", "w": 580, "h": 580, "titulo": "Detalle — cobre noir" },
+    { "src": "/assets/inspiracion/neon.webp", "w": 667, "h": 900, "titulo": "Vertical — neón" },
+    { "src": "/assets/inspiracion/escenario.webp", "w": 750, "h": 500, "titulo": "Escenario — cobre noir" },
+    { "src": "/assets/inspiracion/noir.webp", "w": 899, "h": 900, "titulo": "Plano completo — noir" },
+    { "src": "/assets/inspiracion/cine-35mm.webp", "w": 900, "h": 683, "titulo": "Panorámica — cine 35mm" }
+  ]
+}
