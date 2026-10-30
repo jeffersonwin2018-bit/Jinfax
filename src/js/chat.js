@@ -1,4 +1,4 @@
-// Fer AI — chat con la Vercel Function /api/fer (API de Claude, respuesta en streaming NDJSON)
+// Fer AI — chat con la Vercel Function /api/fer (Gemini, respuesta en streaming NDJSON)
 import { $, finePointer } from './util.js';
 
 const toggle = $('#chatToggle'), panel = $('#chatPanel'), closeBtn = $('#chatClose');

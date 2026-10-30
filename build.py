@@ -162,7 +162,7 @@ def layout(slug, body, title, desc, page):
 </div>
 <aside class="chat" id="chatPanel" aria-hidden="true" aria-label="Chat con Fer AI">
   <div class="chat__head">
-    <div class="chat__id">{YIN}<div><strong>Fer AI</strong><small><i class="dot"></i>En línea · con Claude</small></div></div>
+    <div class="chat__id">{YIN}<div><strong>Fer AI</strong><small><i class="dot"></i>En línea · con Gemini</small></div></div>
     <div class="chat__actions">
       <a class="icon-btn chat__wa" href="https://wa.me/51914300593?text=Hola%20Jinfax%2C%20quiero%20hablar%20contigo." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
       <button class="icon-btn" id="chatClose" type="button" aria-label="Cerrar chat"><svg><use href="#i-close"/></svg></button>

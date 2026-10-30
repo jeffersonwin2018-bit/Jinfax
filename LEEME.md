@@ -13,23 +13,23 @@ git push
 ```
 En ~30 s Vercel publica la nueva versión.
 
-## Fer AI (API de Claude)
-Fer es una función de Vercel en `api/fer.js` que llama a la API de Claude (Anthropic) con tu clave.
+## Fer AI (Gemini, gratis)
+Fer es una función de Vercel en `api/fer.js` que usa Gemini con tu clave **gratuita** de Google AI Studio
+(sin tarjeta; tiene un límite de mensajes por minuto y por día que sobra para la web).
 
-1. Crea una clave en https://platform.claude.com → **API Keys** y carga saldo en *Billing*.
-2. Vercel → tu proyecto → **Settings → Environment Variables** → agrega:
-   - Key: `CLAUDE_API_KEY` · Value: tu clave `sk-ant-...` · Environments: **Production** (y Preview si quieres)
+1. Entra a https://aistudio.google.com/apikey con tu cuenta de Google → **Create API key** → copia la clave (`AIza...`).
+2. Vercel → proyecto **jinfax** → **Settings → Environments → Production** → **Environment Variables** → agrega:
+   - Key: `GEMINI_API_KEY` · Value: tu clave `AIza...`
 3. Vercel → **Deployments** → en el último, menú **⋯ → Redeploy** (las variables solo se aplican en un deploy nuevo).
-4. Prueba: abre `https://TU-DOMINIO/api/fer`. Debe decir `{"status":"ok","key":true}`.
-   Si dice `"key":false`, la variable no se cargó (revisa el nombre y vuelve a hacer Redeploy).
+4. Prueba: abre `https://jinfax.vercel.app/api/fer`. Debe decir `{"status":"ok","key":true}`.
 
 Detalles:
-- Modelo: `claude-opus-5-5` con esfuerzo bajo (rápido para chat). Para gastar mucho menos, agrega la variable
-  `FER_MODEL` = `claude-haiku-5-5`.
-- Respuesta en streaming: el texto aparece mientras Fer escribe. Límite: 10 mensajes por minuto por persona.
-- Personalidad y datos de JinfaX: constante `SYSTEM` en `api/fer.js`.
-- Si la clave falta o es inválida, el chat muestra "en mantenimiento" y un botón a WhatsApp.
-- Errores: Vercel → proyecto → **Logs** (filtra por `/api/fer`).
+- Modelos: prueba `gemini-3.5-flash`, luego `gemini-2.5-flash` y `gemini-2.5-flash-lite` (si uno se queda sin cupo
+  gratuito o no existe, usa el siguiente). Para forzar uno, agrega la variable `FER_MODEL`.
+- Si se acaba el cupo gratuito del día, Fer lo dice y ofrece WhatsApp; al día siguiente vuelve solo.
+- Nivel gratuito de Google: los mensajes pueden usarse para mejorar sus productos. No pongas datos sensibles.
+- Respuesta en streaming. Límite propio: 10 mensajes por minuto por persona.
+- Personalidad y datos de JinfaX: constante `SYSTEM` en `api/fer.js`. Errores: Vercel → proyecto → **Logs**.
 
 ## Agregar fotos a Inspiración o memes a Baje de pepa
 ```bash
