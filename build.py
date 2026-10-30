@@ -169,12 +169,12 @@ def layout(slug, body, title, desc, page):
     </div>
   </div>
   <div class="chat__body" id="chatMessages" aria-live="polite">
-    <div class="msg msg--fer">Hola, soy Fer, el asistente de JinfaX. Pregúntame por automatización, webs, soporte técnico o lo que necesites.</div>
-    <div class="chat__chips" id="chatChips"><button type="button">¿Qué servicios ofrecen?</button><button type="button">Quiero automatizar mi negocio</button><button type="button">¿Cuánto cuesta una web?</button><button type="button">Recomiéndame una playlist</button></div>
+    <div class="msg msg--fer">Hola, soy Fer, la IA de JinfaX. Pregúntame lo que quieras: dudas, tareas, código, ideas, o sobre los servicios de JinfaX.</div>
+    <div class="chat__chips" id="chatChips"><button type="button">Explícame algo difícil fácil</button><button type="button">Ayúdame con mi tarea</button><button type="button">¿Qué servicios ofrecen?</button><button type="button">Recomiéndame una playlist</button></div>
   </div>
   <form class="chat__foot" id="chatForm">
     <label class="sr-only" for="chatInput">Escribe tu mensaje</label>
-    <input id="chatInput" type="text" placeholder="Escribe un mensaje..." autocomplete="off" maxlength="1500" enterkeyhint="send">
+    <input id="chatInput" type="text" placeholder="Pregúntame lo que quieras..." autocomplete="off" maxlength="1500" enterkeyhint="send">
     <button type="submit" aria-label="Enviar mensaje"><svg><use href="#i-send"/></svg></button>
   </form>
 </aside>

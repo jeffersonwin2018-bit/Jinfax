@@ -1,5 +1,5 @@
 // Fer AI — chat con la Vercel Function /api/fer (Gemini, respuesta en streaming NDJSON)
-import { $, finePointer } from './util.js';
+import { $, finePointer, escapeHTML } from './util.js';
 
 const toggle = $('#chatToggle'), panel = $('#chatPanel'), closeBtn = $('#chatClose');
 const form = $('#chatForm'), input = $('#chatInput'), list = $('#chatMessages'), sendBtn = $('#chatForm button');
@@ -7,6 +7,16 @@ const hist = [];
 const API = '/api/fer';
 const WA = '<a class="msg__wa" href="https://wa.me/51914300593?text=Hola%20Jinfax" target="_blank" rel="noopener">Escribir por WhatsApp →</a>';
 let warmed = false, busy = false;
+
+// Formato ligero y seguro: escapa todo y luego permite ```bloques```, `código` y **negrita**
+const inline = (s) => s.replace(/`([^`\n]+)`/g, '<code>$1</code>').replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
+const fmt = (text) => escapeHTML(text).split('```').map((part, i) => {
+  if (i % 2 === 0) return inline(part);
+  const nl = part.indexOf('\n');
+  const lang = nl > 0 ? part.slice(0, nl).trim() : '';
+  const code = (nl >= 0 && /^[\w+#.-]*$/.test(lang) ? part.slice(nl + 1) : part).replace(/\n$/, '');
+  return `<pre class="msg__code"${lang ? ` data-lang="${lang}"` : ''}><code>${code}</code></pre>`;
+}).join('');
 
 export function setChat(open) {
   panel.classList.toggle('is-open', open);
@@ -54,7 +64,7 @@ async function send(text) {
         if (ev.error) throw new Error(ev.error);
         if (ev.t) {
           if (!msg) { typing.remove(); msg = add('', 'fer'); msg.classList.add('is-streaming'); }
-          reply += ev.t; msg.textContent = reply;
+          reply += ev.t; msg.innerHTML = fmt(reply);
           if (list.scrollHeight - list.scrollTop - list.clientHeight < 120) list.scrollTop = list.scrollHeight;
         }
       }
