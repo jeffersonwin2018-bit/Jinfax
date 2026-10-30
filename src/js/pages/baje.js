@@ -3,7 +3,7 @@ import { $, $$, buzz, toast, local, getJSON, escapeHTML } from '../util.js';
 import { PLAYLISTS, coverHTML, openSheet, play } from '../player.js';
 import { renderMasonry } from '../lightbox.js';
 
-const SITE = 'https://jinfax.netlify.app/baje-de-pepa/';
+const SITE = `${location.origin}/baje-de-pepa/`;
 async function shareText(text) {
   try { if (navigator.share) { await navigator.share({ text, url: SITE }); return; } } catch { return; }
   try { await navigator.clipboard.writeText(`${text} ${SITE}`); toast('Copiado. Pégalo donde quieras ✦'); } catch { toast(text); }

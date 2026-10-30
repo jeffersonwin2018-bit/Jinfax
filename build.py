@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Compila Jinfax page: arma las páginas HTML, minifica CSS/JS con esbuild y empaqueta la función de Fer.
-Uso:  python3 build.py        (requiere `npm install` una vez)
-Salida: carpeta sitio/ lista para arrastrar a Netlify (Deploys → drag & drop).
+"""Compila Jinfax page: arma las páginas HTML y minifica CSS/JS con esbuild.
+Uso:  python build.py        (requiere `npm install` una vez)
+Salida: carpeta sitio/ (la sirve Vercel). La IA vive aparte en api/fer.js (Vercel Function).
+Después de compilar: git add -A && git commit && git push → Vercel publica solo.
 """
 import json, os, subprocess, shutil, re
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC, OUT = os.path.join(ROOT, 'src'), os.path.join(ROOT, 'sitio')
-SITE = 'https://jinfax.netlify.app'
+SITE = 'https://jinfax.vercel.app'  # cámbialo si usas otro dominio
 read = lambda p: open(os.path.join(SRC, p), encoding='utf-8').read()
 
 PAGES = [
@@ -195,12 +196,9 @@ if __name__ == '__main__':
     import hashlib, time
     # JS: núcleo + páginas en módulos separados (se cargan solo cuando hacen falta)
     shutil.rmtree(os.path.join(OUT, 'assets/js'), ignore_errors=True)
-    os.makedirs(os.path.join(OUT, 'netlify/functions'), exist_ok=True)
     esbuild(['src/js/core.js', '--bundle', '--splitting', '--format=esm', '--minify', '--target=es2020',
              '--outdir=sitio/assets/js', '--entry-names=[name]', '--chunk-names=c/[name]-[hash]', '--legal-comments=none'])
     esbuild(['src/css/main.css', '--bundle', '--minify', '--outfile=sitio/assets/css/app.css', '--external:/assets/*'])
-    esbuild(['fn-src/fer.mjs', '--bundle', '--platform=node', '--format=esm', '--target=node20', '--minify',
-             '--outfile=sitio/netlify/functions/fer.mjs', "--banner:js=import{createRequire}from'module';const require=createRequire(import.meta.url);", '--log-level=error'])
     h = hashlib.sha1()
     for p in ('sitio/assets/css/app.css', 'sitio/assets/js/core.js'):
         h.update(open(os.path.join(ROOT, p), 'rb').read())

@@ -35,7 +35,7 @@ async function storyImage(q) {
   const logo = await loadLogo();
   if (logo) { const lw = 90, lhh = lw * logo.height / logo.width; g.globalAlpha = 0.9; g.drawImage(logo, 96, H - 260, lw, lhh); g.globalAlpha = 1; }
   g.fillStyle = '#EDEAE3'; g.font = '700 40px "Space Grotesk", sans-serif'; g.fillText('JINFAX', 210, H - 190);
-  g.fillStyle = 'rgba(237,234,227,.5)'; g.font = '400 26px "IBM Plex Mono", monospace'; g.fillText('jinfax.netlify.app/filosofia', 210, H - 148);
+  g.fillStyle = 'rgba(237,234,227,.5)'; g.font = '400 26px "IBM Plex Mono", monospace'; g.fillText(`${location.host}/filosofia`, 210, H - 148);
   return new Promise((res) => c.toBlob(res, 'image/png'));
 }
 async function share(q) {
