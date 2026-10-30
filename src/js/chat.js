@@ -9,9 +9,17 @@ const WA = '<a class="msg__wa" href="https://wa.me/51914300593?text=Hola%20Jinfa
 let warmed = false, busy = false;
 
 // Formato ligero y seguro: escapa todo y luego permite ```bloques```, `código` y **negrita**
-const inline = (s) => s.replace(/`([^`\n]+)`/g, '<code>$1</code>').replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
-const fmt = (text) => escapeHTML(text).split('```').map((part, i) => {
-  if (i % 2 === 0) return inline(part);
+const inline = (s) => s.replace(/`([^`\n]+)`/g, '<code>$1</code>')
+  .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+  .replace(/(^|[\s(])\*([^*\s][^*\n]*?)\*(?=[\s.,;:!?)]|$)/gm, '$1<em>$2</em>');
+const fmt = (text) => escapeHTML(text).split('```').map((part, i, all) => {
+  // texto normal: sin saltos sobrantes pegados a un bloque de código (el bloque ya tiene margen)
+  if (i % 2 === 0) {
+    let t = part;
+    if (i > 0) t = t.replace(/^\n+/, '');
+    if (i < all.length - 1) t = t.replace(/\n+$/, '');
+    return inline(t);
+  }
   const nl = part.indexOf('\n');
   const lang = nl > 0 ? part.slice(0, nl).trim() : '';
   const code = (nl >= 0 && /^[\w+#.-]*$/.test(lang) ? part.slice(nl + 1) : part).replace(/\n$/, '');
